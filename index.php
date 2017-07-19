@@ -3,7 +3,7 @@
 include 'db.php';
 
 $db=new billerDB;
-if(!db)
+if(!$db)
 {
     echo $db->lastErrorMsg();
 }
@@ -14,7 +14,12 @@ if(!db)
         <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-        test
+    <center>
+        <br><br><br><br><br><br>
+        <img src="images/flight.png">
+        <br><br>
+        <div id="loginbox"></div>
+    </center>
     </body>
 </html>
 

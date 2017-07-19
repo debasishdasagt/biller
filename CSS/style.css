@@ -2,4 +2,15 @@ body{
     background: linear-gradient(#211D70, #5E1B97);
     font-family: Calibri;
     color: white;
+    padding: 0px;
+}
+
+#loginbox
+{
+    width: 300px;
+    height: 200px;
+    border: solid 1px blue;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: black 0px 0px 10px;
 }
