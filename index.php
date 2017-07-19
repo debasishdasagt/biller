@@ -7,8 +7,20 @@ if(!db)
 {
     echo $db->lastErrorMsg();
 }
- else {
-     echo "Database opend";
+ else {?>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        test
+    </body>
+</html>
+
+
+
+
+
     
-}
-?>
+<?php }?>
