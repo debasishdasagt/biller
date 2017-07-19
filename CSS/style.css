@@ -1,16 +1,38 @@
 body{
     background: linear-gradient(#211D70, #5E1B97);
     font-family: Calibri;
-    color: white;
     padding: 0px;
 }
 
 #loginbox
 {
     width: 300px;
-    height: 200px;
+    height: 150px;
     border: solid 1px blue;
     border-radius: 10px;
-    background-color: white;
+    background: linear-gradient(#ffffff,#cccccc);
     box-shadow: black 0px 0px 10px;
+    color: black;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.btn1
+{
+    height: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: black 0px 0px 2px;
+    background: linear-gradient(skyblue,black);
+    color: white;
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn1:hover
+{
+    background: linear-gradient(red,brown);
+    color: black;
 }
