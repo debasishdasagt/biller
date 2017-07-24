@@ -1,8 +1,11 @@
 body{
-    background: linear-gradient(#211D70, #5E1B97);
-    font-family: Calibri;
-    padding: 0px;
+    background: linear-gradient(#211D70, red);
+    font-family: "Calibri";
+   
+    
 }
+
+header { border:1px black solid; }
 
 #loginbox
 {
@@ -36,3 +39,4 @@ body{
     background: linear-gradient(red,brown);
     color: black;
 }
+

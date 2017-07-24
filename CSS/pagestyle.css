@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 22, 2017, 11:01:58 PM
+    Author     : Debasish
+*/
+
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background: linear-gradient(to bottom right,#740b83 40%,#b30bd1);
+    height: 100%;
+}
+#topbarbg{
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    opacity: 0.5;
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+.btn2{
+    position: relative;
+    z-index: 3;
+    height: 25px;
+    border: 1px solid white;
+    background: linear-gradient(#4fb0f4,#11ab8c);
+    margin-bottom: 12px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: "Calibri";
+    font-size: 16px;
+    color: white;
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn2:hover
+{
+    border:1px solid #eeeeee;
+    box-shadow: aqua 0px 0px 10px;
+    color: black;
+}
+
+
+#black_flight{
+    position: relative;
+    width: 300px;
+    height: 115px;
+    background-image: url("../images/black_flight.png");
+    z-index: 2;
+}
