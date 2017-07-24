@@ -20,9 +20,8 @@ body{
     position: absolute;
     left: 0px;
     top: 50px;
-    background-color: #33665C;
-    opacity: 0.5;
-    height: 70px;
+    background: linear-gradient(to right,rgba(255,255,255,1),rgba(255,255,255,0));
+    height: 50px;
     width: 100%;
     z-index: 1;
 }
@@ -33,7 +32,7 @@ body{
     height: 25px;
     border: 1px solid grey;
     background: linear-gradient(#F6DB5F,yellow);
-    margin-bottom: 12px;
+    margin-bottom: 25px;
     border-radius: 4px;
     text-align: center;
     font-family: "Calibri";
@@ -60,7 +59,7 @@ body{
     height: 115px;
     background-image: url("../images/black_flight.png");
     z-index: 2;
-    top: 20px;
+    top: 10px;
 }
 
 
