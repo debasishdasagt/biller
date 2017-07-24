@@ -34,7 +34,7 @@ and open the template in the editor.
             </tr>
             <tr>
                 <td align="center">
-                    <div id="container">fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br>fgdgdgdf<br></div>
+                    <div id="container">f</div>
                 </td>
             </tr>
         </table>
