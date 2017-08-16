@@ -36,6 +36,8 @@ else
         <meta charset="UTF-8">
         <title>PNR</title>
         <link rel="stylesheet" href="CSS/components.css">
+        <script type="text/javascript" src="JS/jquery-latest.js"></script>
+        <script src="JS/pnr.js" type="text/javascript"></script>
     </head>
     <body style="margin: 0px">
         <div class="subwindowheader">New PNR</div>
@@ -51,8 +53,12 @@ else
                 <td><input type="text" class="inputboxes1" placeholder="Arrival" id="arrival" name="arrival"></td>
             </tr>
             <tr>
-                <td><input type="text" class="inputboxes1" placeholder="From" id="from" name="from"></td>
-                <td><input type="text" class="inputboxes1" placeholder="TO" id="to" name="to"></td>
+                <td><input type="text" class="inputboxes1" placeholder="From" id="from" name="from" onkeyup=javascript:getsector('from',this.value)>
+                    <div class="popuplist" id="fromlist"><li>sfhsjdf</li><li>dfsdf</li></div>
+                </td>
+                <td><input type="text" class="inputboxes1" placeholder="TO" id="to" name="to">
+                    <div class="popuplist" id="tolist"></div>
+                </td>
             </tr>
             <tr>
                 <td><input type="text" class="inputboxes1" placeholder="Capacity" id="capacity" name="capacity"></td>
