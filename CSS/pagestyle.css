@@ -13,14 +13,14 @@ html{
 }
 body{
     margin: 0;
-    background: linear-gradient(to bottom right,#16222a 40%,#3a6073);
+    background: linear-gradient(to bottom right,#348f50,#56b4d3);
     height: 100%;
 }
 #topbarbg{
     position: absolute;
     left: 0px;
     top: 50px;
-    background: linear-gradient(to right,rgba(255,255,255,1),rgba(255,255,255,0));
+    background: linear-gradient(to right,rgba(255, 255, 255,0.5),rgba(255,255,255,0));
     height: 50px;
     width: 100%;
     z-index: 1;
@@ -28,34 +28,37 @@ body{
 
 .btn2{
     position: relative;
-    z-index: 3;
-    height: 25px;
-    border: 1px solid grey;
-    background: linear-gradient(#F6DB5F,yellow);
-    margin-bottom: 25px;
-    border-radius: 4px;
-    text-align: center;
-    font-family: "Calibri";
-    font-size: 16px;
-    color: black;
-    padding-top: 3px;
-    padding-left: 7px;
-    padding-right: 7px;
-    margin-left: 10px;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background: rgb(20, 60, 232);
+    border: 1px solid #27A0A0;
     cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 3;
+    top: -23px;
+}
+
+.noul
+{
+    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .btn2:hover
 {
-    border:1px solid #eeeeee;
     box-shadow: aqua 0px 0px 10px;
-    color: blue;
 }
 
 
 #black_flight{
     position:relative;
-    width: 300px;
+    width: 256px;
     height: 115px;
     background-image: url("../images/black_flight.png");
     z-index: 2;

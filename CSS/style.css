@@ -1,23 +1,21 @@
 body{
     
     font-family: "Calibri";
-   
-    
+    background-image: url("../images/airplane.jpg");    
 }
 
 header { border:1px black solid; }
 
 #loginbox
 {
-    width: 300px;
-    height: 150px;
+    width: 400px;
     border: solid 1px blue;
     border-radius: 10px;
-    background: linear-gradient(#ffffff,#cccccc);
+    background-color: white;
     box-shadow: black 0px 0px 10px;
     color: black;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .btn1

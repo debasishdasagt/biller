@@ -1,0 +1,142 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 12, 2017, 9:52:38 PM
+    Author     : Debasish
+*/
+
+.inputboxes{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 10px;
+    
+}
+
+.inputboxes:focus
+{
+    background: #d2d9dd;
+}
+
+.button1
+{
+    position: relative;
+    display: block;
+    padding: 8px 10px 7px 10px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+.button1:hover
+{
+    background: #109177;
+    cursor: pointer;
+}
+
+
+.subwindowheader
+{
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:#e8eeef;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    
+}
+
+
+.inputboxes1
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 14px Arial, Helvetica, sans-serif;
+    height: 35px;
+}
+
+.inputboxes1:focus
+{
+    border-bottom: 2px solid #ccc;
+}
+
+.button2
+{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.button2:hover
+{
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+    cursor:pointer;
+}
+
+.info{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.th1
+{
+    background-color: #9ebed3;
+    padding:5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+
+.td1
+{
+    padding:5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    color: #5b5b5b;
+    border-bottom: solid #cccccc 1px;
+}

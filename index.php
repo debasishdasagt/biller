@@ -38,27 +38,28 @@ if(!$db)
 <html>
     <head>
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/components.css">
     </head>
     <body>
     <center>
-        <br><br><br><br><br><br>
+        <br><br><br><br>
         <img src="images/flight.png">
         <br><br>
         <div id="loginbox">
-            <br>
+            
             <form name="login" id="login" action="index.php" method="post">
-            <table width="80%" border="0" cellpadding="5">
+            <table width="95%" border="0" cellpadding="1">
                 <tr>
-                    <td>Username</td>
-                    <td><input type="text" id="uname" name="uname"></td>
+                    
+                    <td><input type="text" id="uname" name="uname" placeholder="Username" class="inputboxes" style="width:100%"></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
-                    <td><input type="password" id="passwd" name="passwd"></td>
+                    
+                    <td><input type="password" id="passwd" name="passwd" placeholder="Password" class="inputboxes" style="width:100%"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center">
-                        <div class="btn1" onclick="javascript:document.getElementById('login').submit()">Login</div>
+                    <td align="center">
+                        <div class="button1" onclick="javascript:document.getElementById('login').submit()">Login</div>
                     </td>
                 </tr>
                 <tr>

@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <link rel="stylesheet" href="CSS/pagestyle.css">
         <link rel="stylesheet" href="CSS/featherlight.css">
+        <link rel="stylesheet" href="CSS/components.css">
         
         <script type="text/javascript" src="JS/jquery-latest.js"></script>
         <script type="text/javascript" src="JS/featherlight.js" charset="utf-8"></script>
@@ -24,8 +25,9 @@ and open the template in the editor.
                             <td valign="bottom">
                                 <table border="0">
                                     <tr>
-                                        <td><div class="btn2">Home</div></td>
-                                        <td><a href="index.php" data-featherlight="iframe"><div class="btn2">PNR</div></a></td>
+                                        
+                                        <td><a class="noul" href="index.php" data-featherlight="iframe"><div class="btn2">PNR</div></a></td>
+                                        <td><a class="noul" href="sector.php" data-featherlight="iframe"><div class="btn2">Sectors</div></a></td>
                                     </tr>
                                 </table>
                                 
