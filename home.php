@@ -26,7 +26,7 @@ and open the template in the editor.
                                 <table border="0">
                                     <tr>
                                         
-                                        <td><a class="noul" href="index.php" data-featherlight="iframe"><div class="btn2">PNR</div></a></td>
+                                        <td><a class="noul" href="pnr.php" data-featherlight="iframe"><div class="btn2">PNR</div></a></td>
                                         <td><a class="noul" href="sector.php" data-featherlight="iframe"><div class="btn2">Sectors</div></a></td>
                                     </tr>
                                 </table>
