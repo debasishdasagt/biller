@@ -41,11 +41,14 @@ and open the template in the editor.
             </tr>
             <tr>
                 <td align="center">
-                    <div id="container">
                     
-                    <a href="http://www.example.com" data-featherlight="iframe">Open example.com in an iframe</a>
                     
-                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
                 </td>
             </tr>
         </table>
