@@ -4,6 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+
+include 'db.php';
+
+$db=new billerDB;
+if(!$db)
+{
+    echo $db->lastErrorMsg();
+}
+
+?>
 <html>
     <head>
         <link rel="stylesheet" href="CSS/pagestyle.css">
@@ -42,9 +53,38 @@ and open the template in the editor.
             <tr>
                 <td align="center">
                     
+                    <div class="tbl-header">
+                    <table class="pnrtable" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th class="pnrth">Departure</th>
+                            <th class="pnrth">Arrival</th>
+                            <th class="pnrth">From</th>
+                            <th class="pnrth">to</th>
+                            <th class="pnrth">Available</th>
+                            <th class="pnrth">PNR Number</th>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="tbl-content">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                            <?php
+                            $selsql="select pnr_num,departure,arrival,sector_from, sector_to,capacity from pnr where status='Y'";
+                    $selres=$db->query($selsql);
+                    while($pointer=$selres ->fetchArray())
+                    {
+                        echo "<tr>";
+                        echo "<td class='tbl-data'>".$pointer['departure']."</td>";
+                        echo "<td class='tbl-data'>".$pointer['arrival']."</td>";
+                        echo "<td class='tbl-data'>".$pointer['sector_from']."</td>";
+                        echo "<td class='tbl-data'>".$pointer['sector_to']."</td>";
+                        echo "<td class='tbl-data'>".$pointer['capacity']."</td>";
+                        echo "<td class='tbl-data'>".$pointer['pnr_num']."</td>";
+                        echo "</tr>";
                     
-                    
-                    
+                    }
+                            ?>
+                        </table>
+                    </div>
                     
                     
                     

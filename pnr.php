@@ -61,27 +61,27 @@ else
         <form id="sectorform" name="sectorform" method="post">
         <table width="80%" cellpadding="2" cellspacing="5" border="0">
             <tr>
-                <td colspan="2"><input type="text" class="inputboxes1" placeholder="PNR Number" id="pnr" name="pnr"></td>
+                <td colspan="2"><input type="text" class="inputboxes1" placeholder="PNR Number" id="pnr" name="pnr" autocomplete="off"></td>
             </tr>
             <tr>
-                <td><input type="text" class="inputboxes1" placeholder="Departure" id="departure" name="departure"></td>
-                <td><input type="text" class="inputboxes1" placeholder="Arrival" id="arrival" name="arrival"></td>
+                <td><input type="text" class="inputboxes1" placeholder="Departure" id="departure" name="departure" autocomplete="off"></td>
+                <td><input type="text" class="inputboxes1" placeholder="Arrival" id="arrival" name="arrival" autocomplete="off"></td>
             </tr>
             <tr>
-                <td><input type="text" class="inputboxes1" placeholder="From" id="from" name="from" onkeyup=javascript:getsector('fromlist',this.value,'from')>
+                <td><input type="text" class="inputboxes1" placeholder="From" id="from" name="from" onkeyup=javascript:getsector('fromlist',this.value,'from') autocomplete="off">
                     <div class="popuplist" id="fromlist"></div>
                 </td>
-                <td><input type="text" class="inputboxes1" placeholder="TO" id="to" name="to" onkeyup=javascript:getsector('tolist',this.value,'to')>
+                <td><input type="text" class="inputboxes1" placeholder="TO" id="to" name="to" onkeyup=javascript:getsector('tolist',this.value,'to')  autocomplete="off">
                     <div class="popuplist" id="tolist"></div>
                 </td>
             </tr>
             <tr>
-                <td><input type="number" class="inputboxes1" placeholder="Capacity" id="capacity" name="capacity" onkeyup="javascript:calculate(this.id)"></td>
-                <td><input type="number" class="inputboxes1" placeholder="Total Price" id="total_price" name="total_price" onkeyup="javascript:calculate(this.id)"></td>
+                <td><input type="number" class="inputboxes1" placeholder="Capacity" id="capacity" name="capacity" onkeyup="javascript:calculate(this.id)"  autocomplete="off"></td>
+                <td><input type="number" class="inputboxes1" placeholder="Total Price" id="total_price" name="total_price" onkeyup="javascript:calculate(this.id)"  autocomplete="off"></td>
             </tr>
             <tr>
-                <td><input type="number" class="inputboxes1" placeholder="Rate per Unit" id="rate" name="rate"></td>
-                <td><input type="text" class="inputboxes1" placeholder="Remarks" id="remarks" name="remarks"></td>
+                <td><input type="number" class="inputboxes1" placeholder="Rate per Unit" id="rate" name="rate"  autocomplete="off"></td>
+                <td><input type="text" class="inputboxes1" placeholder="Remarks" id="remarks" name="remarks" autocomplete="off"></td>
             </tr>
             <tr>
                 <td align="right" colspan="2" > <input type="submit" value="Save" class="button2"></td>
