@@ -16,16 +16,29 @@ if(!$db)
 }
 else
 {
-    if(isset($_POST['sector']))
+    if(isset($_POST['pnr']))
     {
-        $inssql="Insert into sectors(sector,sector_cd,status) values('".$_POST['sector']."','".$_POST['sectorcode']."','Y')";
+        $inssql="Insert into pnr(pnr_num,departure,arrival,sector_from,sector_to,capacity,total_price,rate_per_unit,remarks,status) "
+                . "values('".$_POST['pnr']."','"
+                .$_POST['departure']."','"
+                .$_POST['arrival']."','"
+                .$_POST['from']."','"
+                .$_POST['to']."','"
+                .$_POST['capacity']."','"
+                .$_POST['total_price']."','"
+                .$_POST['rate']."','"
+                .$_POST['remarks']."',"
+                ."'Y')";
+        
+        echo $inssql;
         $insres=$db->query($inssql);
         if($insres)
         {
-            header("location: sector.php?inf=Sector Added Succesfully"); 
+            header("location: pnr.php?inf=PNR Saved Succesfully"); 
         }
         else{
-            header("location: sector.php?inf=Something Went Wrong");
+           
+           header("location: pnr.php?inf=Something Went Wrong"); 
         }
     }
 }
@@ -36,8 +49,10 @@ else
         <meta charset="UTF-8">
         <title>PNR</title>
         <link rel="stylesheet" href="CSS/components.css">
+        <link rel="stylesheet" href="CSS/jquery.datetimepicker.css">
         <script type="text/javascript" src="JS/jquery-latest.js"></script>
         <script src="JS/pnr.js" type="text/javascript"></script>
+        <script type="text/javascript" src="JS/jquery.datetimepicker.full.js"></script>
     </head>
     <body style="margin: 0px">
         <div class="subwindowheader">New PNR</div>
@@ -46,26 +61,26 @@ else
         <form id="sectorform" name="sectorform" method="post">
         <table width="80%" cellpadding="2" cellspacing="5" border="0">
             <tr>
-                <td colspan="2"><input type="text" class="inputboxes1" placeholder="PNR" id="pnr" name="pnr"></td>
+                <td colspan="2"><input type="text" class="inputboxes1" placeholder="PNR Number" id="pnr" name="pnr"></td>
             </tr>
             <tr>
                 <td><input type="text" class="inputboxes1" placeholder="Departure" id="departure" name="departure"></td>
                 <td><input type="text" class="inputboxes1" placeholder="Arrival" id="arrival" name="arrival"></td>
             </tr>
             <tr>
-                <td><input type="text" class="inputboxes1" placeholder="From" id="from" name="from" onkeyup=javascript:getsector('from',this.value)>
-                    <div class="popuplist" id="fromlist"><li>sfhsjdf</li><li>dfsdf</li></div>
+                <td><input type="text" class="inputboxes1" placeholder="From" id="from" name="from" onkeyup=javascript:getsector('fromlist',this.value,'from')>
+                    <div class="popuplist" id="fromlist"></div>
                 </td>
-                <td><input type="text" class="inputboxes1" placeholder="TO" id="to" name="to">
+                <td><input type="text" class="inputboxes1" placeholder="TO" id="to" name="to" onkeyup=javascript:getsector('tolist',this.value,'to')>
                     <div class="popuplist" id="tolist"></div>
                 </td>
             </tr>
             <tr>
-                <td><input type="text" class="inputboxes1" placeholder="Capacity" id="capacity" name="capacity"></td>
-                <td><input type="text" class="inputboxes1" placeholder="Rate per Unit" id="rate" name="rate"></td>
+                <td><input type="number" class="inputboxes1" placeholder="Capacity" id="capacity" name="capacity" onkeyup="javascript:calculate(this.id)"></td>
+                <td><input type="number" class="inputboxes1" placeholder="Total Price" id="total_price" name="total_price" onkeyup="javascript:calculate(this.id)"></td>
             </tr>
             <tr>
-                <td><input type="text" class="inputboxes1" placeholder="Total Price" id="total_price" name="total_price"></td>
+                <td><input type="number" class="inputboxes1" placeholder="Rate per Unit" id="rate" name="rate"></td>
                 <td><input type="text" class="inputboxes1" placeholder="Remarks" id="remarks" name="remarks"></td>
             </tr>
             <tr>
@@ -85,4 +100,23 @@ else
         
     </center>
     </body>
+    <script type="text/javascript">
+        
+        
+    $('#departure').datetimepicker({
+    dayOfWeekStart : 1,
+    lang:'en',
+    step:5,
+    format: 'Y-m-d H:i'
+    });
+    
+    $('#arrival').datetimepicker({
+    dayOfWeekStart : 1,
+    lang:'en',
+    step:5,
+    format: 'Y-m-d H:i'
+    });
+
+    
+    </script>
 </html>

@@ -143,13 +143,23 @@ and open the template in the editor.
 
 
 .popuplist{
-    background: rgba(55,213,247,0.9);
-    box-shadow: 0px 0px 5px black;
-    padding: 4px;
+    box-shadow: 0px 0px 7px black;
     position: absolute;
-    padding-right: 50px;
-    border-radius: 3px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 12px;
-    
+    min-width: 200px;
+    visibility: hidden;
+}
+
+.popuplist li{
+    list-style-type: none;
+    background-color: #577B74;
+    padding: 4px;
+    border-bottom: 1px solid #26AB90;
+    width: 96%;
+    color: white;
+}
+
+.popuplist li:hover{
+    background-color: #0DBE9B;
 }
