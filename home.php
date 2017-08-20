@@ -17,12 +17,19 @@ if(!$db)
 ?>
 <html>
     <head>
-        <link rel="stylesheet" href="CSS/pagestyle.css">
-        <link rel="stylesheet" href="CSS/featherlight.css">
-        <link rel="stylesheet" href="CSS/components.css">
+        <link rel="stylesheet" type="text/css" href="CSS/pagestyle.css">
+        <link rel="stylesheet" type="text/css" href="CSS/featherlight.css">
+        <link rel="stylesheet" type="text/css" href="CSS/components.css">
+
+        
         
         <script type="text/javascript" src="JS/jquery-latest.js"></script>
         <script type="text/javascript" src="JS/featherlight.js" charset="utf-8"></script>
+       
+        
+     
+
+	</style>
         
     </head>
     <body>
@@ -54,7 +61,7 @@ if(!$db)
                 <td align="center">
                     
                     <div class="tbl-header">
-                    <table class="pnrtable" width="100%" cellpadding="0" cellspacing="0">
+                        <table class="pnrtable" width="100%" cellpadding="0" cellspacing="0" >
                         <tr>
                             <th class="pnrth">Departure</th>
                             <th class="pnrth">Arrival</th>
@@ -62,11 +69,14 @@ if(!$db)
                             <th class="pnrth">to</th>
                             <th class="pnrth">Available</th>
                             <th class="pnrth">PNR Number</th>
+                            <th class="pnrth">PNR Info.</th>
                         </tr>
                     </table>
                     </div>
                     <div class="tbl-content">
-                        <table width="100%" cellspacing="0" cellpadding="0">
+                        <table width="100%" cellspacing="0" cellpadding="0" id="pnrtable">
+                            
+                            <tbody>
                             <?php
                             $selsql="select pnr_num,departure,arrival,sector_from, sector_to,capacity from pnr where status='Y'";
                     $selres=$db->query($selsql);
@@ -79,10 +89,12 @@ if(!$db)
                         echo "<td class='tbl-data'>".$pointer['sector_to']."</td>";
                         echo "<td class='tbl-data'>".$pointer['capacity']."</td>";
                         echo "<td class='tbl-data'>".$pointer['pnr_num']."</td>";
+                        echo "<td class='tbl-data'><img src='images/pnrinfo.png' width='15' height='15' style='cursor:pointer' onclick=javascript:pnrinfo('".$pointer['pnr_num']."')></td>";
                         echo "</tr>";
                     
                     }
                             ?>
+                            </tbody>
                         </table>
                     </div>
                     

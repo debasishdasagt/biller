@@ -42,5 +42,6 @@ function calculate(id)
            r=parseFloat(document.getElementById('total_price').value)/parseInt(document.getElementById('capacity').value);
         }
     }
-    document.getElementById('rate').value=r;
+    document.getElementById('rate').value=Math.round(r);
+    document.getElementById('sell_price').value=Math.round(r);
 }
