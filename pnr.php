@@ -18,7 +18,7 @@ else
 {
     if(isset($_POST['pnr']))
     {
-        $inssql="Insert into pnr(pnr_num,departure,arrival,sector_from,sector_to,capacity,total_price,rate_per_unit,remarks,selling_price,status) "
+        $inssql="Insert into pnr(pnr_num,departure,arrival,sector_from,sector_to,capacity,total_price,rate_per_unit,remarks,flight_number,selling_price,status) "
                 . "values('".$_POST['pnr']."','"
                 .$_POST['departure']."','"
                 .$_POST['arrival']."','"
@@ -28,6 +28,7 @@ else
                 .$_POST['total_price']."','"
                 .$_POST['rate']."','"
                 .$_POST['remarks']."','"
+                .$_POST['flight_number']."','"
                 .$_POST['sell_price']."',"
                 ."'Y')";
         
@@ -39,7 +40,7 @@ else
         }
         else{
            
-           header("location: pnr.php?inf=Something Went Wrong"); 
+           header("location: pnr.php?inf=Something Went Wrong: Error= ".$inssql); 
         }
     }
 }
@@ -85,7 +86,8 @@ else
                 <td><input type="number" class="inputboxes1" placeholder="Selling Price" id="sell_price" name="sell_price" autocomplete="off"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="text" class="inputboxes1" placeholder="Remarks" id="remarks" name="remarks" autocomplete="off"></td>
+                <td><input type="text" class="inputboxes1" placeholder="Flight Number" id="flight_number" name="flight_number" autocomplete="off"></td>
+                <td><input type="text" class="inputboxes1" placeholder="Remarks" id="remarks" name="remarks" autocomplete="off"></td>
             </tr>
             <tr>
                 <td align="right" colspan="2" > <input type="submit" value="Save" class="button2"></td>
