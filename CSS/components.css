@@ -7,6 +7,12 @@ and open the template in the editor.
     Created on : Aug 12, 2017, 9:52:38 PM
     Author     : Debasish
 */
+.noul
+{
+    text-decoration: none;
+    text-decoration: none !important;
+}
+
 
 .inputboxes{
     font-family: Georgia, "Times New Roman", Times, serif;

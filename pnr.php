@@ -32,7 +32,7 @@ else
                 .$_POST['sell_price']."',"
                 ."'Y')";
         
-        echo $inssql;
+        
         $insres=$db->query($inssql);
         if($insres)
         {

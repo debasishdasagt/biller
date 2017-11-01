@@ -89,7 +89,7 @@ if(!$db)
                         echo "<td class='tbl-data'>".$pointer['sector_to']."</td>";
                         echo "<td class='tbl-data'>".$pointer['capacity']."</td>";
                         echo "<td class='tbl-data'>".$pointer['pnr_num']."</td>";
-                        echo "<td class='tbl-data'><img src='images/pnrinfo.png' width='15' height='15' style='cursor:pointer' onclick=javascript:pnrinfo('".$pointer['pnr_num']."')></td>";
+                        echo "<td class='tbl-data'><a href='pnrinfo.php?pnr=".$pointer['pnr_num']."' data-featherlight='iframe'><img src='images/pnrinfo.png' width='15' height='15' style='cursor:pointer' ></a></td>";
                         echo "</tr>";
                     
                     }
