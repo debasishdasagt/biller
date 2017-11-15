@@ -15,7 +15,7 @@ if (!$db)
  else {
      if(isset($_GET['pnr']))
      {
-     $pnrselectsql="select id,name,address,age,booking_date,status,remarks from customers where pnr='".$_GET['pnr']."'"; 
+     $pnrselectsql="select id,name,contact_number,age,booking_date,status,remarks,paid_amount from customers where pnr='".$_GET['pnr']."'"; 
      $pnrcustcount="select count(*) as CNT from customers where pnr='".$_GET['pnr']."' and status <> 'B'";
      $pnrcustallowed="select capacity from pnr where pnr_num='".$_GET['pnr']."'";
      $pnrselres=$db->query($pnrselectsql);
@@ -57,11 +57,29 @@ if (!$db)
         
          <table width="90%" cellspacing="0" cellpadding="0" border="0">
             <tr>
-                <th class="th1">Sector</th>
-                <th class="th1">Sector-Code</th>
-                <th class="th1">Status</th>
-                <th class="th1">Edit</th>
+                <th class="th1">Booked On</th>
+                <th class="th1">Name</th>
+                <th class="th1">Amount Paid</th>
+                <th class="th1">Age</th>
+                <th class="th1">Contact Num.</th>
+                <th class="th1">Remarks</th>
             </tr>
+            <?php
+            if($pnrselres)
+            {
+                while($pointer=$pnrselres->fetchArray())
+                {
+                    echo "<tr>";
+                    echo "<td class='td1' align='center'>".$pointer['booking_date']."</td>";
+                    echo "<td class='td1' align='center'>".$pointer['name']."</td>";
+                    echo "<td class='td1' align='center'>".$pointer['paid_amount']."</td>";
+                    echo "<td class='td1' align='center'>".$pointer['age']."</td>";
+                    echo "<td class='td1' align='center'>".$pointer['contact_number']."</td>";
+                    echo "<td class='td1' align='center'>".$pointer['remarks']."</td>";
+                    echo "</tr>";
+                }
+            }
+            ?>
         
          </table>
              

@@ -45,3 +45,26 @@ function calculate(id)
     document.getElementById('rate').value=Math.round(r);
     document.getElementById('sell_price').value=Math.round(r);
 }
+
+
+function getage(datestr)
+{
+    birth_month= parseInt(datestr.substr(5,2));
+    birth_day= parseInt(datestr.substr(8,2));
+    birth_year= parseInt(datestr.substr(0,4));
+    today_date = new Date();
+    today_year = today_date.getFullYear();
+    today_month = today_date.getMonth();
+    today_day = today_date.getDate();
+    age = today_year - birth_year;
+
+    if ( today_month < (birth_month - 1))
+    {
+        age--;
+    }
+    if (((birth_month - 1) == today_month) && (today_day < birth_day))
+    {
+        age--;
+    }
+    document.getElementById('c_age').value= age;
+}
