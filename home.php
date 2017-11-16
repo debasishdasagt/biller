@@ -78,7 +78,7 @@ if(!$db)
                             
                             <tbody>
                             <?php
-                            $selsql="select pnr_num,departure,arrival,sector_from, sector_to,capacity from pnr where status='Y'";
+                            $selsql="select pnr_num,departure,arrival,sector_from, sector_to,(select capacity - count(*) from customers where pnr=pnr_num)||' / '||capacity as capa from pnr where status='Y'";
                     $selres=$db->query($selsql);
                     while($pointer=$selres ->fetchArray())
                     {
@@ -87,7 +87,7 @@ if(!$db)
                         echo "<td class='tbl-data'>".$pointer['arrival']."</td>";
                         echo "<td class='tbl-data'>".$pointer['sector_from']."</td>";
                         echo "<td class='tbl-data'>".$pointer['sector_to']."</td>";
-                        echo "<td class='tbl-data'>".$pointer['capacity']."</td>";
+                        echo "<td class='tbl-data'>".$pointer['capa']."</td>";
                         echo "<td class='tbl-data'>".$pointer['pnr_num']."</td>";
                         echo "<td class='tbl-data'><a href='pnrinfo.php?pnr=".$pointer['pnr_num']."' data-featherlight='iframe'><img src='images/pnrinfo.png' class='infobutton' ></a></td>";
                         echo "</tr>";

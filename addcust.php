@@ -61,14 +61,14 @@ echo $inf;
         <script src="JS/pnr.js" type="text/javascript"></script>
         <script type="text/javascript" src="JS/jquery.datetimepicker.full.js"></script>
         
-        <title>PNR Information</title>
+        <title>New Customer</title>
     </head>
     <body style="margin: 0px">
         
         <div class="subwindowheader">
             <table cellpadding="5" border="0">
                 <tr>
-                    <td><img src="images/back.png" class="infobutton" style="width: 20px; height: 20px" onclick="javascript:history.go(-1)"></td>
+                    <td><img src="images/back.png" class="infobutton" style="width: 20px; height: 20px" onclick="javascript:document.location='pnrinfo.php?pnr=<?php echo $_GET['pnr']?>'"></td>
                     <td>New Customer</td>
                 </tr>
             </table></div>

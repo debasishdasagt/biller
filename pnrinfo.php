@@ -78,15 +78,15 @@ if (!$db)
                 <td class="td2">Remarks: <span class="lbl1"><?php echo $pnrpointer['remarks'] ?></span></td>
             </tr>
         </table>
-        
+        <div style="width:90%; text-align:center; font-size: 24px; font-weight: bold; color: red; margin: 10px">
         <?php
         if($pnrcountres == 0)
         {
             echo ("No Customer(s) booked this PNR");
         }
         else {
-            ?>
-        
+            ?></div>
+        <div style="width:90%; text-align:left; margin-top: 5px">Registered Customers are: </div>
          <table width="90%" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <th class="th1">Booked On</th>
@@ -119,7 +119,7 @@ if (!$db)
              
              <?php
         }
-        if($pnrcountres <= $custallowedres)
+        if($pnrcountres < $custallowedres)
         {
         ?>
         <br>
