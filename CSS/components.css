@@ -175,10 +175,22 @@ and open the template in the editor.
     width: 15px;
     height: 15px;
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .infobutton:hover
 {
     opacity: 1;
+}
+
+.td2
+{
+    background-color:#a5ded7;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.lbl1
+{
+    color:#006dcc;
 }

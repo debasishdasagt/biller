@@ -16,11 +16,14 @@ if (!$db)
      if(isset($_GET['pnr']))
      {
      $pnrselectsql="select id,name,contact_number,age,booking_date,status,remarks,paid_amount from customers where pnr='".$_GET['pnr']."'"; 
+     $pnrinfosql="select * from pnr where pnr_num='".$_GET['pnr']."'";
      $pnrcustcount="select count(*) as CNT from customers where pnr='".$_GET['pnr']."' and status <> 'B'";
      $pnrcustallowed="select capacity from pnr where pnr_num='".$_GET['pnr']."'";
      $pnrselres=$db->query($pnrselectsql);
      $pnrcountres=$db->querySingle($pnrcustcount);
      $custallowedres=$db->querySingle($pnrcustallowed);
+     $pnrinfores=$db->query($pnrinfosql);
+     $pnrpointer=$pnrinfores->fetchArray();
      
      
 ?>
@@ -42,11 +45,40 @@ if (!$db)
         <script type="text/javascript" src="JS/jquery.datetimepicker.full.js"></script>
         
         <title>PNR Information</title>
+        <style>
+            body
+            {
+                margin: 0px;
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-size: 12px;
+                color: black;
+            }
+        </style>
     </head>
-    <body style="margin: 0px">
+    <body style="">
         <div class="subwindowheader">PNR Information : <?php echo $_GET['pnr']; ?></div>
         
     <center>
+        
+        <table cellpadding="7" cellspacing="3" border="0">
+            <tr>
+                <td class="td2">Departure: <span class="lbl1"> <?php echo $pnrpointer['departure']." (".$pnrpointer['sector_from'].")" ?></span></td>
+                <td class="td2">Arrival: <span class="lbl1"><?php echo $pnrpointer['arrival']." (".$pnrpointer['sector_to'].")" ?></span></td>
+            </tr>
+            <tr>
+                <td class="td2">Capacity: <span class="lbl1"><?php echo $pnrpointer['capacity'] ?></span></td>
+                <td class="td2">Rate Per Unit: <span class="lbl1"><?php echo $pnrpointer['rate_per_unit'] ?></span></td>
+            </tr>
+            <tr>
+                <td class="td2">Total Price: <span class="lbl1"><?php echo $pnrpointer['total_price'] ?></span></td>
+                <td class="td2">Selling Price: <span class="lbl1"><?php echo $pnrpointer['selling_price']." / Unit" ?></span></td>
+            </tr>
+            <tr>
+                <td class="td2">Flight Number: <span class="lbl1"><?php echo $pnrpointer['flight_number'] ?></span></td>
+                <td class="td2">Remarks: <span class="lbl1"><?php echo $pnrpointer['remarks'] ?></span></td>
+            </tr>
+        </table>
+        
         <?php
         if($pnrcountres == 0)
         {
