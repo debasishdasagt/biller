@@ -26,6 +26,19 @@ if (!$db)
      $pnrpointer=$pnrinfores->fetchArray();
      
      
+     if(isset($_GET['s']))
+                {
+                    $statussql="update pnr set status='".$_GET['s']."' where id='".$_GET['id']."'";
+                    $statusres=$db->query($statussql);
+                    if($statusres)
+                    {
+                        header("location:pnrinfo.php?inf=Status Updated&pnr=".$_GET['pnr']);
+                    }
+                    else {
+                        header("location:pnrinfo.php?inf=Something went wrong while updating status&pnr=".$_GET['pnr']);
+                    }
+                }
+     
 ?>
      
      
@@ -76,6 +89,23 @@ if (!$db)
             <tr>
                 <td class="td2">Flight Number: <span class="lbl1"><?php echo $pnrpointer['flight_number'] ?></span></td>
                 <td class="td2">Remarks: <span class="lbl1"><?php echo $pnrpointer['remarks'] ?></span></td>
+            </tr>
+            <tr>
+                <td class="td2" align="center"><span class="lbl1" style="vertical-align: middle">
+                    <?php
+                                if($pnrpointer['status']=="Y")
+                        {
+                            $churl="pnrinfo.php?id=".$pnrpointer['id']."&s=N&pnr=".$_GET['pnr'];
+                            echo "<a href='".$churl."'><img src='images/active.png' border='0'></a>";
+                        }
+                        else 
+                        {
+                            $churl="pnrinfo.php?id=".$pnrpointer['id']."&s=Y&pnr=".$_GET['pnr'];
+                            echo "<a href='".$churl."'><img src='images/inactive.png' border='0'></a>";
+                        }
+                        ?>
+                    </span></td>
+                
             </tr>
         </table>
         <div style="width:90%; text-align:center; font-size: 24px; font-weight: bold; color: red; margin: 10px">
