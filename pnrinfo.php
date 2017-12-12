@@ -77,6 +77,10 @@ if (!$db)
                 <td class="td2">Flight Number: <span class="lbl1"><?php echo $pnrpointer['flight_number'] ?></span></td>
                 <td class="td2">Remarks: <span class="lbl1"><?php echo $pnrpointer['remarks'] ?></span></td>
             </tr>
+            <tr>
+                <td class="td2">Status: <span class="lbl1"><?php echo $pnrpointer['flight_number'] ?></span></td>
+                <td class="td2">Remarks: <span class="lbl1"><?php echo $pnrpointer['remarks'] ?></span></td>
+            </tr>
         </table>
         <div style="width:90%; text-align:center; font-size: 24px; font-weight: bold; color: red; margin: 10px">
         <?php
