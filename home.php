@@ -96,6 +96,7 @@ if(!$db)
                             ?>
                             </tbody>
                         </table>
+                        
                     </div>
                     
                     
@@ -104,6 +105,7 @@ if(!$db)
                 </td>
             </tr>
         </table>
+        <span class="txt">Show inactive PNRs.</span>
     </center>
     </body>
 </html>

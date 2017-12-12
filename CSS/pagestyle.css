@@ -127,3 +127,11 @@ body{
 .pnrth:nth-child(5), .tbl-data:nth-child(5){width:100px;}
 .pnrth:nth-child(6), .tbl-data:nth-child(6){width:100px;}
 .pnrth:nth-child(7), .tbl-data:nth-child(7){width:100px;}
+
+
+.txt
+{
+    font-family: 'calibri';
+    font-size: 10px;
+    color:white;
+}
